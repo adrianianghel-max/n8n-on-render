@@ -7,6 +7,5 @@ ENV N8N_HOST=0.0.0.0
 ENV N8N_PORT=5678
 ENV WEBHOOK_URL=https://placeholder.onrender.com/
 
-EXPOSE 5678
-
-CMD ["n8n", "start"]
+# Render rulează automat comanda din CMD
+CMD ["tini", "--", "n8n"]
